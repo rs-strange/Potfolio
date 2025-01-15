@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name=".jrxml" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ba588cd0-10b4-4032-805c-d4006c96ae9e">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="nombreCompleto" class="java.lang.String"/>
+    <parameter name="fechaActual" class="java.lang.String"/>
+    <parameter name="imageDir" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="170" splitType="Stretch">
+            <staticText>
+                <reportElement mode="Opaque" x="70" y="0" width="150" height="30" forecolor="#003399" backcolor="#FFFFFF" uuid="127e90e8-15a9-4214-937f-68f34c99a0bc"/>
+                <textElement textAlignment="Center">
+                    <font size="23"/>
+                </textElement>
+                <text><![CDATA[Bancomer]]></text>
+            </staticText>
+            <image>
+                <reportElement x="-10" y="0" width="100" height="30" uuid="57aed16f-b4df-4781-9f26-dbdbecfa3387"/>
+                <imageExpression><![CDATA[ new java.net.URI($P{imageDir} + "bbvalogo.png") ]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="210" y="36" width="350" height="23" forecolor="#003399" uuid="c0fd9e30-8f20-4040-9d50-d67ca14c65f6"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <text><![CDATA[Solicitud de servicios de transferencias internacionales]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="470" y="60" width="81" height="21" uuid="b0c5598a-cd81-4ee7-bb2c-7fc44a8b6190"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="490" y="60" width="20" height="21" uuid="2a3665a9-c1a8-44f3-980d-428a46fa8dbe"/>
+                <textElement>
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[/]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="520" y="60" width="20" height="21" uuid="f2949b2e-2e6b-4809-a621-b9cdbb77223d"/>
+                <textElement>
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[/]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="420" y="59" width="50" height="22" uuid="890c1d33-fe1f-407e-84f4-b7b9fea76c9d"/>
+                <textElement>
+                    <font size="13"/>
+                </textElement>
+                <text><![CDATA[Fecha : ]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="61" splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="130" splitType="Stretch">
+            <staticText>
+                <reportElement x="120" y="49" width="180" height="30" uuid="9b045f13-e96f-404e-8e27-d5a00d165cee"/>
+                <textElement>
+                    <font size="19"/>
+                </textElement>
+                <text><![CDATA[nombre completo :]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="310" y="47" width="241" height="30" uuid="b385c8b8-d2b5-4c5f-a04c-2459fc880c6f"/>
+                <textElement>
+                    <font size="19"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{nombreCompleto}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="130" y="90" width="150" height="30" uuid="df199e44-62b2-4713-b63f-2bc4b86f6601"/>
+                <text><![CDATA[fecha comprobante:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="300" y="98" width="190" height="30" uuid="425b869e-1e85-42b1-8730-b3053927afc3"/>
+                <textFieldExpression><![CDATA[$P{fechaActual}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
