@@ -54,7 +54,7 @@ public class AuthenticationController {
    @PutMapping("update")
     public ResponseEntity<UserResponse> update(@RequestBody UserRequest userRequest){
        UserResponse response = userService.updateUser(userRequest);
-       logger.info("usuario actualizado completed");
+       logger.info("usuario actualizado Success - Strange3");
         return ResponseEntity.ok(response);
    }
 
